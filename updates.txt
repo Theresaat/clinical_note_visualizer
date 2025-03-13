@@ -1,0 +1,41 @@
+1. Sidebar Setup:
+	•	Original: Used st.sidebar.header for section headers and manually created inputs.
+	•	Updated: Wrapped the sidebar logic with a with st.sidebar block for improved readability and structure.
+
+2. API Key Validation:
+	•	Original: Basic validation; the app checks for the presence of an API key.
+	•	Updated: Added .strip() to ensure whitespace-only inputs are not accepted.
+
+3. Notes Handling:
+	•	Original: Notes were appended directly without stripping whitespace or validating input.
+	•	Updated: custom_note.strip() ensures no empty strings are added from user input.
+
+4. Error Handling:
+	•	Original: No explicit error handling for loading example notes.
+	•	Updated: Added try-except block to handle potential errors when loading example notes.
+
+5. Spinner and Timing Feedback:
+	•	Original: Displays a spinner during note processing but doesn’t provide feedback on time taken.
+	•	Updated: Measures and displays the time taken to process the note.
+
+6. Download Processed Notes:
+	•	Original: No option to download processed notes.
+	•	Updated: Added functionality to download processed notes as a JSON file using st.download_button.
+
+7. Display Section Enhancements:
+	•	Original: Displays strings or lists but doesn’t join lists into formatted text.
+	•	Updated: Improved formatting by joining list items into a single string with newline separation.
+
+8. Documentation:
+	•	Original: Limited comments.
+	•	Updated: Added inline comments for better code readability and explanation of logic.
+
+9. Dependency Additions:
+	•	Original: Relied only on provided imports.
+	•	Updated: Added time and json imports for timing the processing and enabling downloads.
+
+10. Code Structure:
+	•	Original: Mixed code for user input, processing, and display logic.
+	•	Updated: Improved readability with better organization and separation of logic.
+
+These changes improve the usability, reliability, and user experience of the app while adding new features like timing feedback and the ability to download processed notes.
